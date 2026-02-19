@@ -25,3 +25,26 @@ environments:
     needs:
       - preprod-bc-eastus2
       - preprod-bc-centralus
+
+  preprod-bc-west2:
+    name: PreProd BC East US 2 Compute Stack
+    templateName: packops-bc
+    workspace: preprod-packops-bc-west2
+    revision: Testing
+    requiresApproval: false
+
+  preprod-bc-centralus2:
+    name: Prod GPU Instance Central US 2
+    templateName: packops-bc
+    workspace: preprod-packops-bc-centralus
+    revision: Testing
+    requiresApproval: false
+
+  preprod-api-route:
+    name: PreProd API Route
+    templateName: packops-api-route
+    workspace: preprod-packops-api-route
+    revision: Testing
+    requiresApproval: false
+    needs:
+      - preprod-bc-centralus2
