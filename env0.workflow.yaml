@@ -1,0 +1,27 @@
+settings:
+  environmentRemovalStrategy: detach
+  
+environments:
+  preprod-bc-eastus2:
+    name: PreProd BC East US 2
+    templateName: packops-bc
+    workspace: preprod-packops-bc-eastus2
+    revision: testing
+    requiresApproval: false
+
+  preprod-bc-centralus:
+    name: PreProd BC Central US
+    templateName: packops-bc
+    workspace: preprod-packops-bc-centralus
+    revision: testing
+    requiresApproval: false
+
+  preprod-api-route:
+    name: PreProd API Route
+    templateName: packops-api-route
+    workspace: preprod-packops-api-route
+    revision: testing
+    requiresApproval: false
+    needs:
+      - preprod-bc-eastus2
+      - preprod-bc-centralus
