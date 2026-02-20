@@ -1,9 +1,9 @@
 provider "local" {}
 
 variable "marker_version" {
-  description    = "Version string written into the api marker file"
-  type           = string
-  marker_version = "v1.0.1"
+  description = "Version string written into the api marker file"
+  type        = string
+  default     = "v1.0.1"
 }
 
 resource "local_file" "bc_marker" {
