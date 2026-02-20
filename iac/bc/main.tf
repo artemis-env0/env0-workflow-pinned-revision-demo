@@ -1,9 +1,8 @@
 provider "local" {}
 
 variable "marker_version" {
+  description = "Version string written into the api marker file"
   type        = string
-  description = "Bump this to force a plan diff."
-  default     = "1.0.1"
 }
 
 resource "local_file" "bc_marker" {
