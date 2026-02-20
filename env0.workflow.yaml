@@ -27,8 +27,8 @@ environments:
       - preprod-bc-centralus
   
   preprod-compute-subStack:  
-    name: AMD EPYC CPU COMPUTE INSTANCE -  East US 2
-    templateName: packops-bc
+    name: AMD EPYC CPU COMPUTE INSTANCE - East US 2
+    templateName: packops-compute-cpu-bc
     workspace: preprod-packops-bc-compute-eastus1
     revision: Testing
     requiresApproval: false
@@ -36,8 +36,8 @@ environments:
       - preprod-api-route
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack:  
-    name: AMD EPYC CPU COMPUTE INSTANCE -  East US 2
-    templateName: packops-bc
+    name: AMD EPYC CPU COMPUTE INSTANCE - East US 2
+    templateName: packops-compute-gpu-bc
     workspace: preprod-packops-bc-compute-eastus1
     revision: Testing
     requiresApproval: false
