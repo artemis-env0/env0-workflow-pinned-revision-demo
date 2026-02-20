@@ -33,9 +33,9 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
+      - preprod-api-route
       - preprod-bc-eastus2
       - preprod-bc-centralus
-      - preprod-compute-subStack
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack:  
     name: NVIDIA RTX6000 PRO GB202
@@ -44,7 +44,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-bc-eastus2
-      - preprod-bc-centralus
+      - preprod-api-route
       - preprod-compute-subStack
       
