@@ -10,7 +10,7 @@ resource "local_file" "api_marker" {
   filename = "${path.module}/.env0-demo-${terraform.workspace}-epyc-cpu-route.txt"
   content  = <<EOT
 env0 demo marker
-component=api-route
+component=bc-cpu
 workspace=${terraform.workspace}
 marker_version=${var.marker_version_cpu_AMD_EPYC}
 EOT
