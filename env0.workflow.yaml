@@ -1,6 +1,6 @@
 settings:
   environmentRemovalStrategy: detach
-  
+
 environments:
   preprod-bc-eastus2:
     name: PreProd BC East US 2
@@ -25,26 +25,22 @@ environments:
     needs:
       - preprod-bc-eastus2
       - preprod-bc-centralus
-
-  preprod-bc-west2:
-    name: PreProd BC East US 2 Compute Stack
+  
+  preprod-compute-subStack:  
+    name: AMD EPYC CPU COMPUTE INSTANCE -  East US 2
     templateName: packops-bc
-    workspace: preprod-packops-bc-west2
-    revision: Testing
-    requiresApproval: false
-
-  preprod-bc-centralus2:
-    name: Prod GPU Instance Central US 2
-    templateName: packops-bc
-    workspace: preprod-packops-bc-centralus
-    revision: Testing
-    requiresApproval: false
-
-  preprod-api-route:
-    name: PreProd API Route
-    templateName: packops-api-route
-    workspace: preprod-packops-api-route
+    workspace: preprod-packops-bc-compute-eastus1
     revision: Testing
     requiresApproval: false
     needs:
-      - preprod-bc-centralus2
+      - preprod-api-route
+
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack:  
+    name: AMD EPYC CPU COMPUTE INSTANCE -  East US 2
+    templateName: packops-bc
+    workspace: preprod-packops-bc-compute-eastus1
+    revision: Testing
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack
+      
