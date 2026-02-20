@@ -3,7 +3,7 @@ provider "local" {}
 variable "marker_version" {
   type        = string
   description = "Bump this to force a plan diff."
-  default     = "1.0.0"
+  default     = "1.0.1"
 }
 
 resource "local_file" "bc_marker" {
