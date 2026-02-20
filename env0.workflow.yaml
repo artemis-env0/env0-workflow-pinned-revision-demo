@@ -6,21 +6,21 @@ environments:
     name: PreProd BC East US 2
     templateName: packops-bc
     workspace: preprod-packops-bc-eastus2
-    revision: Testing
+    revision: v.1.0.0
     requiresApproval: false
 
   preprod-bc-centralus:
     name: PreProd BC Central US
     templateName: packops-bc
     workspace: preprod-packops-bc-centralus
-    revision: Testing
+    revision: v.1.0.0
     requiresApproval: false
 
   preprod-api-route:
     name: PreProd API Route
     templateName: packops-api-route
     workspace: preprod-packops-api-route
-    revision: Testing
+    revision: v.1.0.0
     requiresApproval: false
     needs:
       - preprod-bc-eastus2
@@ -30,7 +30,7 @@ environments:
     name: AMD EPYC CPU COMPUTE INSTANCE - East US 2
     templateName: packops-compute-cpu-bc
     workspace: preprod-packops-bc-compute-eastus1
-    revision: Testing
+    revision: v.1.0.0
     requiresApproval: false
     needs:
       - preprod-api-route
@@ -39,7 +39,7 @@ environments:
     name: AMD EPYC CPU COMPUTE INSTANCE - East US 2
     templateName: packops-compute-gpu-bc
     workspace: preprod-packops-bc-compute-eastus1
-    revision: Testing
+    revision: v.1.0.0
     requiresApproval: false
     needs:
       - preprod-compute-subStack
