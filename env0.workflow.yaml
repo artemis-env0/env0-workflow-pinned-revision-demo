@@ -36,7 +36,7 @@ environments:
       - preprod-api-route
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack:  
-    name: AMD EPYC CPU COMPUTE INSTANCE - East US 2
+    name: NVIDIA GPU GB202 INSTANCE - East US 2
     templateName: packops-compute-gpu-bc
     workspace: preprod-packops-bc-compute-eastus1
     revision: v.1.0.0
