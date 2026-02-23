@@ -54,5 +54,4 @@ environments:
     requiresApproval: false
     needs:
       - preprod-compute-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack
       
