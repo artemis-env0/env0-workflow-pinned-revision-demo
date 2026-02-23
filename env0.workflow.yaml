@@ -2,6 +2,12 @@ settings:
   environmentRemovalStrategy: detach
 
 environments:
+  preprod-bc-eastus1:
+    name: PreProd BC East US 1
+    templateName: packops-bc
+    workspace: preprod-packops-bc-eastus1-001
+    revision: v.1.0.0
+    requiresApproval: false
   preprod-bc-eastus2:
     name: PreProd BC East US 2
     templateName: packops-bc
@@ -15,16 +21,37 @@ environments:
     workspace: preprod-packops-bc-centralus-001
     revision: v.1.0.0
     requiresApproval: false
+    
+  preprod-bc-westus2:
+    name: PreProd BC West US 2
+    templateName: packops-bc
+    workspace: preprod-packops-bc-westus2-001
+    revision: v.1.0.0
+    requiresApproval: false
 
-  preprod-api-route:
-    name: PreProd API Route
+  preprod-api-route-00:
+    name: PreProd API Route 00
+    templateName: packops-api-route
+    workspace: preprod-packops-api-route-000
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-bc-eastus1
+      - preprod-bc-eastus2
+      - preprod-bc-centralus
+      - preprod-bc-westus2
+      
+  preprod-api-route-01:
+    name: PreProd API Route 01
     templateName: packops-api-route
     workspace: preprod-packops-api-route-001
     revision: v.1.0.0
     requiresApproval: false
     needs:
+      - preprod-bc-eastus1
       - preprod-bc-eastus2
       - preprod-bc-centralus
+      - preprod-bc-westus2
   
   preprod-compute-subStack-00:  
     name: AMD EPYC CPU COMPUTE S00
@@ -33,7 +60,8 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
       
   preprod-compute-subStack-01:  
     name: AMD EPYC CPU COMPUTE S01
@@ -42,7 +70,8 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
       
   preprod-compute-subStack-02:  
     name: AMD EPYC CPU COMPUTE S02
