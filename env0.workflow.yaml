@@ -141,6 +141,41 @@ environments:
       - preprod-compute-subStack-01
       - preprod-compute-subStack-02
       - preprod-compute-subStack-03
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 04
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-04-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
+
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 05
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-05-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
+
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 06
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-06-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-Storage-NVME-G5_Storage-SP00-subStack:  
     name: AZURE NVME ENTERPRISE NVME SSD
