@@ -80,7 +80,8 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
       
   preprod-compute-subStack-03:  
     name: AMD EPYC CPU COMPUTE S03
@@ -89,7 +90,8 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack:  
     name: NVIDIA RTX6000 PRO GB202 00
