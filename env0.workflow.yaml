@@ -26,8 +26,8 @@ environments:
       - preprod-bc-eastus2
       - preprod-bc-centralus
   
-  preprod-compute-subStack:  
-    name: AMD EPYC CPU COMPUTE
+  preprod-compute-subStack-00:  
+    name: AMD EPYC CPU COMPUTE S00
     templateName: packops-compute-cpu-bc
     workspace: preprod-packops-bc-compute-eastus1
     revision: v.1.0.0
@@ -36,6 +36,18 @@ environments:
       - preprod-api-route
       - preprod-bc-eastus2
       - preprod-bc-centralus
+      
+  preprod-compute-subStack-01:  
+    name: AMD EPYC CPU COMPUTE S01
+    templateName: packops-compute-cpu-bc
+    workspace: preprod-packops-bc-compute-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-api-route
+      - preprod-bc-eastus2
+      - preprod-bc-centralus
+      - preprod-compute-subStack-00
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack:  
     name: NVIDIA RTX6000 PRO GB202
