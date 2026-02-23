@@ -29,7 +29,7 @@ environments:
   preprod-compute-subStack-00:  
     name: AMD EPYC CPU COMPUTE S00
     templateName: packops-compute-cpu-bc
-    workspace: preprod-packops-bc-compute-eastus1
+    workspace: preprod-packops-bc-compute-S00-eastus1
     revision: v.1.0.0
     requiresApproval: false
     needs:
@@ -40,7 +40,7 @@ environments:
   preprod-compute-subStack-01:  
     name: AMD EPYC CPU COMPUTE S01
     templateName: packops-compute-cpu-bc
-    workspace: preprod-packops-bc-compute-eastus1
+    workspace: preprod-packops-bc-compute-S01-eastus1
     revision: v.1.0.0
     requiresApproval: false
     needs:
