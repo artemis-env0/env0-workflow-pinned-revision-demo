@@ -34,8 +34,6 @@ environments:
     requiresApproval: false
     needs:
       - preprod-api-route
-      - preprod-bc-eastus2
-      - preprod-bc-centralus
       
   preprod-compute-subStack-01:  
     name: AMD EPYC CPU COMPUTE S01
@@ -45,8 +43,24 @@ environments:
     requiresApproval: false
     needs:
       - preprod-api-route
-      - preprod-bc-eastus2
-      - preprod-bc-centralus
+      
+  preprod-compute-subStack-02:  
+    name: AMD EPYC CPU COMPUTE S02
+    templateName: packops-compute-cpu-bc
+    workspace: preprod-packops-bc-compute-S02-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-api-route
+      
+  preprod-compute-subStack-03:  
+    name: AMD EPYC CPU COMPUTE S03
+    templateName: packops-compute-cpu-bc
+    workspace: preprod-packops-bc-compute-S03-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-api-route
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack:  
     name: NVIDIA RTX6000 PRO GB202 00
@@ -57,6 +71,8 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
       
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack:  
     name: NVIDIA RTX6000 PRO GB202 01
@@ -67,6 +83,8 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
       
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack:  
     name: NVIDIA RTX6000 PRO GB202 02
@@ -77,6 +95,8 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack:  
     name: NVIDIA RTX6000 PRO GB202 03
@@ -87,6 +107,8 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-Storage-NVME-G5_Storage-SP00-subStack:  
     name: AZURE NVME ENTERPRISE NVME SSD
@@ -97,6 +119,8 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-Storage-NVME-G5_Storage-SP01-subStack:  
     name: AZURE NVME ENTERPRISE NVME SSD
@@ -107,4 +131,5 @@ environments:
     needs:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
-      
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
