@@ -7,7 +7,7 @@ variable "marker_version_gpu_NVIDIA_RTX6000_GB202" {
 }
 
 resource "local_file" "api_marker" {
-  filename = "${path.module}/.env0-demo-${terraform.workspace}-epyc-cpu-route.txt"
+  filename = "${path.module}/.env0-demo-${terraform.workspace}-nv-gpu-gb202.txt"
   content  = <<EOT
 env0 demo marker
 component=bc-gpu
