@@ -88,10 +88,20 @@ environments:
       - preprod-compute-subStack-00
       - preprod-compute-subStack-01
 
-  preprod-Storage-NVME-G5_Storage-subStack:  
+  preprod-Storage-NVME-G5_Storage-SP00-subStack:  
     name: AZURE NVME ENTERPRISE NVME SSD
     templateName: packops-storage-nvme-bc
-    workspace: preprod-packops-bc-storage-eastus1
+    workspace: preprod-packops-bc-storage-sp00-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+
+  preprod-Storage-NVME-G5_Storage-SP01-subStack:  
+    name: AZURE NVME ENTERPRISE NVME SSD
+    templateName: packops-storage-nvme-bc
+    workspace: preprod-packops-bc-storage-sp01-eastus1
     revision: v.1.0.0
     requiresApproval: false
     needs:
