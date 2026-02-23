@@ -6,21 +6,21 @@ environments:
     name: PreProd BC East US 2
     templateName: packops-bc
     workspace: preprod-packops-bc-eastus2
-    revision: testing
+    revision: Testing
     requiresApproval: false
 
   preprod-bc-centralus:
     name: PreProd BC Central US
     templateName: packops-bc
     workspace: preprod-packops-bc-centralus
-    revision: testing
+    revision: Testing
     requiresApproval: false
 
   preprod-api-route:
     name: PreProd API Route
     templateName: packops-api-route
     workspace: preprod-packops-api-route
-    revision: testing
+    revision: Testing
     requiresApproval: false
     needs:
       - preprod-bc-eastus2
