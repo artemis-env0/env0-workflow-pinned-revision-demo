@@ -44,7 +44,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-api-route
       - preprod-compute-subStack
 
   preprod-Storage-NVME-G5_Storage-subStack:  
