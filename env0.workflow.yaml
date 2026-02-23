@@ -46,4 +46,14 @@ environments:
     needs:
       - preprod-api-route
       - preprod-compute-subStack
+
+  preprod-Storage-NVME-G5_Storage-subStack:  
+    name: AZURE NVME ENTERPRISE NVME SSD
+    templateName: packops-storage-nvme-bc
+    workspace: preprod-packops-bc-storage-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-compute-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-subStack
       
