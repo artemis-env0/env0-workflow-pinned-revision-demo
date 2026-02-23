@@ -8,6 +8,7 @@ environments:
     workspace: preprod-packops-bc-eastus1-001
     revision: v.1.0.0
     requiresApproval: false
+    
   preprod-bc-eastus2:
     name: PreProd BC East US 2
     templateName: packops-bc
