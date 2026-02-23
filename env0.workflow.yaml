@@ -33,7 +33,7 @@ environments:
   preprod-api-route-00:
     name: PreProd API Route 00
     templateName: packops-api-route
-    workspace: preprod-packops-api-route-000
+    workspace: preprod-packops-api-route-00-A
     revision: v.1.0.0
     requiresApproval: false
     needs:
@@ -45,7 +45,7 @@ environments:
   preprod-api-route-01:
     name: PreProd API Route 01
     templateName: packops-api-route
-    workspace: preprod-packops-api-route-001
+    workspace: preprod-packops-api-route-01-A
     revision: v.1.0.0
     requiresApproval: false
     needs:
