@@ -141,6 +141,7 @@ environments:
       - preprod-compute-subStack-01
       - preprod-compute-subStack-02
       - preprod-compute-subStack-03
+      
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack:  
     name: NVIDIA RTX6000 PRO GB202 04
     templateName: packops-compute-gpu-bc
@@ -148,10 +149,10 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack:  
     name: NVIDIA RTX6000 PRO GB202 05
@@ -160,10 +161,10 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
+      - preprod-compute-subStack-00
+      - preprod-compute-subStack-01
+      - preprod-compute-subStack-02
+      - preprod-compute-subStack-03
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack:  
     name: NVIDIA RTX6000 PRO GB202 06
@@ -186,9 +187,57 @@ environments:
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack 
+
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-08-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 08
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-08-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
+
+
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-09-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 09
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-09-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
       
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-10-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 10
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-10-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
 
+  preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-11-subStack:  
+    name: NVIDIA RTX6000 PRO GB202 11
+    templateName: packops-compute-gpu-bc
+    workspace: preprod-packops-bc-gpu-11-eastus1
+    revision: v.1.0.0
+    requiresApproval: false
+    needs:
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
+      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
+      
   preprod-Storage-NVME-G5_Storage-SP00-subStack:  
     name: AZURE NVME ENTERPRISE NVME SSD
     templateName: packops-storage-nvme-bc
