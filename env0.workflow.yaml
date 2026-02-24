@@ -201,10 +201,6 @@ environments:
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-07-subStack
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-09-subStack:  
     name: NVIDIA RTX6000 PRO GB202 09
@@ -217,10 +213,6 @@ environments:
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-07-subStack
       
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-10-subStack:  
     name: NVIDIA RTX6000 PRO GB202 10
@@ -233,10 +225,6 @@ environments:
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-07-subStack
 
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-11-subStack:  
     name: NVIDIA RTX6000 PRO GB202 11
@@ -249,10 +237,6 @@ environments:
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-07-subStack
       
   preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-12-subStack:  
     name: NVIDIA RTX6000 PRO GB202 12
@@ -261,10 +245,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
@@ -277,10 +257,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
@@ -293,10 +269,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
@@ -309,10 +281,6 @@ environments:
     revision: v.1.0.0
     requiresApproval: false
     needs:
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-00-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-01-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-02-subStack
-      - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-03-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-04-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-05-subStack
       - preprod-NVIDIA-RTX-PRO-6000-GB202-GPU-06-subStack
