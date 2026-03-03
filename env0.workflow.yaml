@@ -5,21 +5,21 @@ environments:
   preprod-bc-eastus2:
     name: PreProd BC East US 2
     templateName: packops-bc
-    workspace: preprod-packops-bc-eastus2
+    workspace: pr-wf-preprod-packops-bc-eastus2
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
 
   preprod-bc-centralus:
     name: PreProd BC Central US
     templateName: packops-bc
-    workspace: preprod-packops-bc-centralus
+    workspace: pr-wf-preprod-packops-bc-centralus
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
 
   preprod-api-route:
     name: PreProd API Route
     templateName: packops-api-route
-    workspace: preprod-packops-api-route
+    workspace: pr-wf-preprod-packops-api-route
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
     needs:
@@ -29,7 +29,7 @@ environments:
   prod1-bc-eastus2:
     name: Prod1 BC East US 2
     templateName: packops-bc
-    workspace: bc-eastus2-77840305
+    workspace: pr-wf-bc-eastus2-77840305
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
     needs:
@@ -38,7 +38,7 @@ environments:
   prod1-bc-centralus:
     name: Prod1 BC Central US
     templateName: packops-bc
-    workspace: packops-workflow-76833-79532132-bc-centralus
+    workspace: pr-wf-packops-workflow-76833-79532132-bc-centralus
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
     needs:
@@ -47,7 +47,7 @@ environments:
   prod1-api-route:
     name: Prod1 API Route
     templateName: packops-api-route
-    workspace: packops-workflow-76833-79532132-packops-api-route
+    workspace: pr-wf-packops-workflow-76833-79532132-packops-api-route
     requiresApproval: true
     revision: ${WORKFLOW_REVISION}
     needs:
