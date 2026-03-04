@@ -1,0 +1,45 @@
+version: 2
+shell: bash
+
+deploy:
+  steps:
+    terraformInit:
+      before:
+        - name: Checkout target git ref
+          run: |
+            set -euo pipefail
+
+            echo "Starting custom checkout step"
+            echo "Current branch: $(git rev-parse --abbrev-ref HEAD || true)"
+            echo "Current commit: $(git rev-parse --short HEAD)"
+
+            TARGET_REF="${TARGET_GIT_REF:-}"
+
+            if [ -z "${TARGET_REF}" ]; then
+              echo "TARGET_GIT_REF is empty. Using the default revision already cloned."
+              exit 0
+            fi
+
+            echo "TARGET_GIT_REF provided: ${TARGET_REF}"
+            echo "Fetching refs from origin (heads and tags)"
+            git fetch --prune origin "+refs/heads/*:refs/remotes/origin/*" || true
+            git fetch --tags --force origin || true
+
+            if git show-ref --verify --quiet "refs/remotes/origin/${TARGET_REF}"; then
+              echo "Found remote branch origin/${TARGET_REF}. Checking it out."
+              git checkout -B "${TARGET_REF}" "origin/${TARGET_REF}"
+              echo "Checked out branch: $(git rev-parse --abbrev-ref HEAD)"
+              echo "Checked out commit: $(git rev-parse --short HEAD)"
+              exit 0
+            fi
+
+            if git show-ref --tags --verify --quiet "refs/tags/${TARGET_REF}"; then
+              echo "Found tag ${TARGET_REF}. Checking it out."
+              git checkout "refs/tags/${TARGET_REF}"
+              echo "Checked out commit: $(git rev-parse --short HEAD)"
+              exit 0
+            fi
+
+            echo "Branch or tag not found. Attempting checkout as commit SHA or generic ref."
+            git checkout "${TARGET_REF}"
+            echo "Checked out commit: $(git rev-parse --short HEAD)"
