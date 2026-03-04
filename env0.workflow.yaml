@@ -107,7 +107,10 @@ environments:
     requiresApproval: true
     revision: pr-v.1.0.1
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
+      - preprod-api-route-02
+      - preprod-api-route-03
 
   prod1-bc-centralus:
     name: Prod1 BC Central US
@@ -116,7 +119,10 @@ environments:
     requiresApproval: true
     revision: pr-main
     needs:
-      - preprod-api-route
+      - preprod-api-route-00
+      - preprod-api-route-01
+      - preprod-api-route-02
+      - preprod-api-route-03
 
   prod1-api-route:
     name: Prod1 API Route
