@@ -9,22 +9,96 @@ environments:
     requiresApproval: true
     revision: pr-main
 
-  preprod-bc-centralus:
-    name: PreProd BC Central US
+  preprod-bc-centralus-00:
+    name: PreProd BC Central US 0
     templateName: packops-bc
-    workspace: pr-wf-preprod-packops-bc-centralus
+    workspace: pr-wf-preprod-packops-bc-centralus-00
     requiresApproval: true
     revision: pr-v.1.0.1
 
-  preprod-api-route:
-    name: PreProd API Route
+  preprod-bc-centralus-01:
+    name: PreProd BC Central US 1
+    templateName: packops-bc
+    workspace: pr-wf-preprod-packops-bc-centralus-01
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    
+  preprod-bc-centralus-02:
+    name: PreProd BC Central US 2
+    templateName: packops-bc
+    workspace: pr-wf-preprod-packops-bc-centralus-02
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    
+  preprod-bc-centralus-03:
+    name: PreProd BC Central US 3
+    templateName: packops-bc
+    workspace: pr-wf-preprod-packops-bc-centralus-03
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    
+  preprod-bc-centralus-04:
+    name: PreProd BC Central US 4
+    templateName: packops-bc
+    workspace: pr-wf-preprod-packops-bc-centralus-04
+    requiresApproval: true
+    revision: pr-v.1.0.1
+
+  preprod-api-route-00:
+    name: PreProd API Route 00
     templateName: packops-api-route
-    workspace: pr-wf-preprod-packops-api-route
+    workspace: pr-wf-preprod-packops-api-route-00
     requiresApproval: true
     revision: pr-v.1.0.1
     needs:
       - preprod-bc-eastus2
-      - preprod-bc-centralus
+      - preprod-bc-centralus-00
+      - preprod-bc-centralus-01
+      - preprod-bc-centralus-02
+      - preprod-bc-centralus-03
+      - preprod-bc-centralus-04
+
+  preprod-api-route-01:
+    name: PreProd API Route 01
+    templateName: packops-api-route
+    workspace: pr-wf-preprod-packops-api-route-01
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    needs:
+      - preprod-bc-eastus2
+      - preprod-bc-centralus-00
+      - preprod-bc-centralus-01
+      - preprod-bc-centralus-02
+      - preprod-bc-centralus-03
+      - preprod-bc-centralus-04
+      
+  preprod-api-route-02:
+    name: PreProd API Route 02
+    templateName: packops-api-route
+    workspace: pr-wf-preprod-packops-api-route-02
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    needs:
+      - preprod-bc-eastus2
+      - preprod-bc-centralus-00
+      - preprod-bc-centralus-01
+      - preprod-bc-centralus-02
+      - preprod-bc-centralus-03
+      - preprod-bc-centralus-04
+
+  preprod-api-route-03:
+    name: PreProd API Route 03
+    templateName: packops-api-route
+    workspace: pr-wf-preprod-packops-api-route-03
+    requiresApproval: true
+    revision: pr-v.1.0.1
+    needs:
+      - preprod-bc-eastus2
+      - preprod-bc-centralus-00
+      - preprod-bc-centralus-01
+      - preprod-bc-centralus-02
+      - preprod-bc-centralus-03
+      - preprod-bc-centralus-04
 
   prod1-bc-eastus2:
     name: Prod1 BC East US 2
